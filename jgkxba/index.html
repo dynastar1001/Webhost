@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Click Counter</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    #counter {
+      font-size: 5em;
+      margin-bottom: 30px;
+      color: #0ff;
+      text-shadow: 0 0 15px #0ff;
+    }
+
+    button {
+      background: #00ffc3;
+      color: #000;
+      font-size: 1.5em;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00ffc3aa;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.8em;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🖱️ Click Me!</h1>
+  <div id="counter">0</div>
+  <button onclick="addClick()">Click Here</button>
+
+  <div class="footer">Made with ❤️ by Symbolic</div>
+
+  <script>
+    let count = 0;
+    function addClick() {
+      count++;
+      document.getElementById("counter").textContent = count;
+    }
+  </script>
+
+</body>
+</html>
